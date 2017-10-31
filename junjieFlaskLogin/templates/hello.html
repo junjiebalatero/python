@@ -1,0 +1,13 @@
+{% extends "template.html" %}
+{% block content %}
+    <h2>Welcome! You are now logged in.</h2>
+    <a href="/logout">Logout</a>
+    <br />
+    <br />
+    <h3>LIst rep and sales</h3>
+    {% for item in sales %}
+    <ul>
+        <li>{{ item.rep_name }} = {{ item.amount }}</li>
+    </ul><br />
+{% endfor %}
+{% endblock %}
